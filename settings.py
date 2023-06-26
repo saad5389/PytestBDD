@@ -1,3 +1,2 @@
 browser = "chrome"
-env = "preprod"
-implicit_wait = 5
+env = "staging"

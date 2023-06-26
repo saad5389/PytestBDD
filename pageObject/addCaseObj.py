@@ -1,5 +1,12 @@
 from selenium.webdriver.common.by import By
+from driver_handler import DriverHandle
 
 
-def createCase(browser):
-    return browser.find_element(By.ID, 'addCase').click()
+class AddCase:
+    ADD_CASE = (By.ID, 'addCase')
+
+    def __init__(self):
+        self.driver_handler = DriverHandle()
+
+    def createCase(self):
+        self.driver_handler.click_element(*self.ADD_CASE)
